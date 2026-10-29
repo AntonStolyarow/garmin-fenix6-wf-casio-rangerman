@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parent.parent
 SCREEN = 260
-BG, FG, LINE = (0, 0, 0), (255, 255, 255), (170, 170, 170)
+BG, FG, LINE = (255, 255, 255), (0, 0, 0), (85, 85, 85)
 
 # те же символы, что в _glyphs в LcdBlockView.mc
 GLYPHS = {

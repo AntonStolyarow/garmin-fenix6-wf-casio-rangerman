@@ -12,9 +12,9 @@ import Toybox.WatchUi;
 class LcdBlockView extends WatchUi.WatchFace {
 
     // Цвета. У Fenix 6 экран MIP на 64 цвета, поэтому только "чистые" значения
-    private const BG = 0x000000;
-    private const FG = 0xFFFFFF;
-    private const LINE = 0xAAAAAA;
+    private const BG = 0xFFFFFF;
+    private const FG = 0x000000;
+    private const LINE = 0x555555;
 
     // ---------- раскладка (экран 260x260, те же числа в tools/preview.py) ----------
 
