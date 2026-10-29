@@ -25,6 +25,7 @@ class LcdBlockView extends WatchUi.WatchFace {
     private const DATE_H = 26;
     private const DATE_T = 4;
     private const DATE_STEP = 20;
+    private const SLASH_T = 2.5;    // толщина косой черты в дате
 
     // Линии, ограничивающие блок времени
     private const LINE1_Y = 89;
@@ -121,7 +122,7 @@ class LcdBlockView extends WatchUi.WatchFace {
         // Дата: "10/29 THU"
         var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         drawString(dc, pad(info.month), DATE_X, DATE_Y, DATE_W, DATE_H, DATE_T, DATE_STEP);
-        drawThick(dc, DATE_X + 42, DATE_Y + 24, DATE_X + 50, DATE_Y + 2, DATE_T);
+        drawThick(dc, DATE_X + 42, DATE_Y + 24, DATE_X + 50, DATE_Y + 2, SLASH_T);
         drawString(dc, pad(info.day), DATE_X + 54, DATE_Y, DATE_W, DATE_H, DATE_T, DATE_STEP);
         drawString(dc, _days[info.day_of_week - 1], DATE_X + 104, DATE_Y, DATE_W, DATE_H, DATE_T, DATE_STEP);
 

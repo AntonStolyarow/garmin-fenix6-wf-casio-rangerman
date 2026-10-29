@@ -45,6 +45,7 @@ GLYPHS = {
 
 # раскладка - те же константы, что в LcdBlockView.mc
 DATE = dict(x=51, y=52, w=15, h=26, t=4, step=20)
+SLASH_T = 2.5
 LINE1_Y, LINE2_Y = 89, 179
 P = dict(x=30, y=104, w=12, h=18, t=4, step=0)
 TIME = dict(y=102, w=36, h=66, t=9, step=42)
@@ -97,7 +98,7 @@ def preview(month=10, day=29, dow="THU", hour=12, minute=11, sec=59, pm=True):
 
     dx, dy = DATE["x"], DATE["y"]
     text(d, pad(month), **DATE)
-    thick(d, dx + 42, dy + 24, dx + 50, dy + 2, DATE["t"], FG)
+    thick(d, dx + 42, dy + 24, dx + 50, dy + 2, SLASH_T, FG)
     text(d, pad(day), dx + 54, dy, DATE["w"], DATE["h"], DATE["t"], DATE["step"])
     text(d, dow, dx + 104, dy, DATE["w"], DATE["h"], DATE["t"], DATE["step"])
 
